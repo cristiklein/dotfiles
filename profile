@@ -38,6 +38,9 @@ fi
 if [ -d "/usr/lib/ccache" ]; then
     PATH="/usr/lib/ccache:$PATH"
 fi
+if [ -f ~/.cargo/env ]; then
+    . ~/.cargo/env
+fi
 
 # Give highest priority to the user's PATH
 if [ -d "$HOME/bin" ] ; then
